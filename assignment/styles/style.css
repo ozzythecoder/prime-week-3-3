@@ -1,1 +1,17 @@
 /* give your assignment a fun background color */
+body {
+  background-color: #ff8caa;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+li {
+  margin: 2px 0;
+}
+
+.binturong {
+  display: block;
+  margin: auto;
+  padding-top: 5px;
+  max-width: 70%;
+  height: auto;
+}
