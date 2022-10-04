@@ -46,8 +46,6 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
 
-console.log(supplyChanges);
-
 for (change of supplyChanges) {
   if (change > 0) {
     console.log('Added', change, 'parts.');
@@ -75,11 +73,18 @@ console.log('8. Total supplies available is:', totalSupplies);
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
 
+// Setting each factor as a variable.
+// In case of change, the executing code won't need to be edited.
 let looseParts = 572;
 let fullBoxes = 0;
+let partsPerBox = 7;
+
+console.log(`We have ${looseParts} loose parts, and one box can hold ${partsPerBox} parts.`)
+console.log('Packing...');
+
 do {
-  looseParts -= 7;
+  looseParts -= partsPerBox;
   fullBoxes += 1;
-} while (looseParts >= 7);
+} while (looseParts >= partsPerBox);
 
 console.log(`We have ${fullBoxes} full boxes of parts, and ${looseParts} parts left over.`);
